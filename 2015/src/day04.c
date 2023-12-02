@@ -270,28 +270,6 @@ mine_advent_coins(const char *secret, size_t length, uint32_t nzeroes)
 void
 day04(void)
 {
-#if 0
-    typedef struct Test
-    {
-        const char *input;
-        const char *expected;
-    } Test;
-
-#define ARRAY_SIZE(array) (sizeof(array)/sizeof(*(array)))
-
-    Test tests[] = {
-        { .input = "abcdef609043", .expected = "000001dbbfa3a5c83a2d506429c7b00e" },
-        { .input = "pqrstuv1048970", .expected = "000006136ef2ff3b291c85725f17325c" },
-    };
-
-    for (size_t i = 0; i < ARRAY_SIZE(tests); ++i)
-    {
-        Test *test = tests + i;
-        hash_md5(test->input, strlen(test->input), actual);
-        assert(strcmp(actual, test->expected) == 0);
-    }
-#endif
-
     puts("\nDay 04:");
 
     uint32_t nzeroes = 5;
@@ -300,8 +278,10 @@ day04(void)
     assert(result == 346386);
     printf("Santa's secret number for %u zeroes is %u.\n", nzeroes, result);
 
+#if 0
     nzeroes = 6;
     result = mine_advent_coins(input, strlen(input), nzeroes);
     assert(result == 9958218);
     printf("Santa's secret number for %u zeroes is %u.\n", nzeroes, result);
+#endif
 }

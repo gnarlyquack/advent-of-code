@@ -61,4 +61,7 @@ main(void)
     day03(input->data);
 
     day04();
+
+    input = read_file("day05.txt");
+    day05(input->data);
 }
