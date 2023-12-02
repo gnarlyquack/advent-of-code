@@ -192,27 +192,4 @@ day05(const char *input)
     result = part2(input);
     assert(result == 53);
     printf("%d new strings are nice.\n", result);
-
-#if 0
-    typedef struct Test
-    {
-        const char *input;
-        bool expected;
-    } Test;
-
-
-    Test tests[] = {
-        { .input = "qjhvhtzxzqqjkmpb", .expected = true },
-        { .input = "xxyxx", .expected = true },
-        { .input = "uurcxstgmygtbstg", .expected = false },
-        { .input = "ieodomkazucvgmuy", .expected = false },
-    };
-
-    for (unsigned i = 0; i < ARRAY_SIZE(tests); ++i)
-    {
-        Test *test = tests + i;
-        bool actual = part2(test->input);
-        assert(actual == test->expected);
-    }
-#endif
 }
