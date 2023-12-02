@@ -1,0 +1,5 @@
+/build/
+
+# The Advent of Code website requests puzzle inputs not be shared
+# https://adventofcode.com/2024/about#faq_copying
+data/
