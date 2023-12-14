@@ -65,6 +65,9 @@ main(void)
     input = read_file("day05.txt");
     day05(input->data);
 
-    input =read_file("day06.txt");
+    input = read_file("day06.txt");
     day06(input->data);
+
+    input = read_file("day07.txt");
+    day07(input->data);
 }
