@@ -30,4 +30,8 @@ void
 day07(const char *input);
 
 
+void
+day08(const char *input);
+
+
 #endif // AOC_2015_H

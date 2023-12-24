@@ -70,4 +70,7 @@ main(void)
 
     input = read_file("day07.txt");
     day07(input->data);
+
+    input = read_file("day08.txt");
+    day08(input->data);
 }

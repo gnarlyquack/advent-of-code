@@ -264,38 +264,4 @@ day06(const char *input)
     result = part2(input);
     assert(result == 14687245);
     printf("Total brightness is %u.\n", result);
-
-#if 0
-#define ARRAY_SIZE(array) (sizeof(array)/sizeof(*(array)))
-
-    typedef struct Test
-    {
-        const char *input;
-        uint32_t expected;
-    } Test;
-
-
-    Test tests[] = {
-        {
-            .input = "turn on 0,0 through 999,999",
-            .expected = 1000000,
-        },
-        {
-            .input = "toggle 0,0 through 999,0",
-            .expected = 1000,
-        },
-        {
-            .input = "turn off 499,499 through 500,500",
-            .expected = 0,
-        },
-    };
-
-    for (unsigned i = 0; i < ARRAY_SIZE(tests); ++i)
-    {
-        Test *test = tests + i;
-        uint32_t actual = parse_instructions(test->input);
-        assert(actual == test->expected);
-    }
-#endif
-
 }
